@@ -1,0 +1,213 @@
+.contact {
+  padding: 120px 0;
+  background: white;
+}
+
+.contact__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border: 12px solid black;
+  box-shadow: 30px 30px 0 #dc2626;
+}
+
+@media (min-width: 1024px) {
+  .contact__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1280px) {
+  .contact__grid {
+    grid-template-columns: 5fr 7fr;
+  }
+}
+
+.contact__info {
+  background: black;
+  color: white;
+  padding: clamp(32px, 5vw, 64px);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact__accent {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 160px;
+  height: 160px;
+  background: #dc2626;
+  transform: rotate(45deg);
+}
+
+.contact__title {
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+  line-height: 1;
+}
+
+.contact__list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.contact__item {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.contact__icon {
+  background: #dc2626;
+  border: 4px solid white;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.contact__iconSvg {
+  width: 32px;
+  height: 32px;
+  color: white;
+}
+
+.contact__item:hover .contact__icon {
+  transform: rotate(12deg);
+}
+
+.contact__item:hover .contact__icon {
+  transform: rotate(12deg);
+}
+
+.contact__label {
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #ef4444;
+  margin-bottom: 4px;
+}
+
+.contact__value {
+  font-size: clamp(18px, 2.5vw, 28px);
+  font-weight: 900;
+  word-break: break-word;
+}
+
+.contact__socials {
+  margin-top: 80px;
+  display: flex;
+  gap: 24px;
+}
+
+.contact__social {
+  width: 64px;
+  height: 64px;
+  border: 4px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  transition: 0.2s;
+  color: #f4f4f5;
+  text-decoration: none;
+}
+
+.contact__social:hover {
+  background: #dc2626;
+}
+
+.contact__formBox {
+  background: white;
+  padding: 64px;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0; /* 🔥 ключовий fix для grid overflow */
+}
+
+.contact__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .contact__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact__labelText {
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.contact__input,
+.contact__select,
+.contact__textarea {
+  border: 4px solid black;
+  padding: 20px;
+  font-size: clamp(14px, 2.2vw, 20px);
+  font-weight: 900;
+  outline: none;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.contact__textarea {
+  height: 180px;
+  resize: none;
+}
+
+.contact__input:focus,
+.contact__select:focus,
+.contact__textarea:focus {
+  background: #f4f4f5;
+}
+
+.contact__btn {
+  background: #dc2626;
+  color: white;
+  border: 4px solid black;
+  padding: 32px;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  box-shadow: 12px 12px 0 black;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.contact__btn:hover {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+  background: black;
+}

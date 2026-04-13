@@ -1,0 +1,142 @@
+.about {
+  padding: 120px 0;
+  background: black;
+  overflow: hidden;
+}
+
+.about__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 80px;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .about__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 120px;
+  }
+}
+
+.about__media {
+  position: relative;
+}
+
+.about__imageBox {
+  position: relative;
+  border: 12px solid white;
+  overflow: hidden;
+}
+
+.about__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(1) brightness(0.75);
+  transition: 0.7s ease;
+}
+
+.about__imageBox:hover .about__image {
+  filter: grayscale(0) brightness(1);
+}
+
+.about__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(220, 38, 38, 0.2);
+  mix-blend-mode: multiply;
+}
+
+.about__stat--floating {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  background: #dc2626;
+  padding: 40px;
+  border: 8px solid white;
+  box-shadow: 20px 20px 0 black;
+}
+
+.about__content {
+  color: white;
+}
+
+.about__title {
+  font-size: 72px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .about__title {
+    font-size: 120px;
+  }
+}
+
+.about__title--accent {
+  color: #dc2626;
+}
+
+.about__lead {
+  font-size: 28px;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  border-left: 8px solid #dc2626;
+  padding-left: 24px;
+  margin-bottom: 32px;
+}
+
+.about__text {
+  font-size: 18px;
+  color: #a1a1aa;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.about__stat-number {
+  font-size: 48px;
+  font-weight: 900;
+  color: #f4eeee;
+}
+
+.about__stat-label {
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #71717a;
+}
+
+.about__btn {
+  background: white;
+  color: black;
+  border: 4px solid black;
+  padding: 16px 40px;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.about__btn:hover {
+  background: #dc2626;
+  color: white;
+  transform: translate(4px, 4px);
+}

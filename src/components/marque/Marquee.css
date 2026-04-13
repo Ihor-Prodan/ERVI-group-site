@@ -1,0 +1,39 @@
+.marquee {
+  padding: 24px 0;
+  overflow: hidden;
+  border-top: 8px solid black;
+  border-bottom: 8px solid black;
+}
+
+.marquee--red {
+  background-color: #dc2626;
+}
+
+.marquee--black {
+  background-color: #000;
+}
+
+.marquee--yellow {
+  background-color: #facc15;
+}
+
+.marquee__track {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.marquee__text {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: -0.03em;
+}
+
+.marquee__divider {
+  color: black;
+  opacity: 0.3;
+  margin: 0 16px;
+}

@@ -1,0 +1,262 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  padding: 24px 0;
+  transition: all 0.5s ease;
+  background: transparent;
+}
+
+.navbar--scrolled {
+  background: white;
+  padding: 12px 0;
+  border-bottom: 8px solid black;
+}
+
+.navbar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.navbar__logo-icon {
+  background: black;
+  padding: 10px;
+  border: 4px solid black;
+  transition: 0.3s;
+}
+
+.navbar__logo-icon-svg {
+  width: 28px;
+  height: 28px;
+  color: white;
+}
+
+.navbar__logo:hover .navbar__logo-icon {
+  background: #dc2626;
+  transform: rotate(-6deg);
+}
+
+.navbar__logo-text {
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.navbar__logo-text span {
+  color: #dc2626;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar__link {
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  position: relative;
+  color: black;
+  text-decoration: none;
+}
+
+.navbar__link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: #dc2626;
+  transition: 0.3s;
+}
+
+.navbar__link:hover::after {
+  width: 100%;
+}
+
+.navbar__link:hover {
+  color: #dc2626;
+}
+
+.navbar__cta {
+  background: #dc2626;
+  color: white;
+  border: 4px solid black;
+  padding: 12px 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  box-shadow: 6px 6px 0 black;
+  transition: 0.2s;
+}
+
+.navbar__cta:hover {
+  background: black;
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+
+.navbar__burger {
+  display: none;
+  font-size: 24px;
+  border: 4px solid black;
+  background: white;
+  width: 48px;
+  height: 48px;
+}
+
+.navbar__mobile {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  max-width: 420px;
+  height: 100vh;
+
+  background: white;
+  border-left: 8px solid black;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: right 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 100;
+  box-shadow: -20px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar__mobile--open {
+  right: 0;
+}
+
+.navbar__mobile-header {
+  padding: 32px;
+  background: #dc2626;
+  color: white;
+
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 8px solid black;
+}
+
+.navbar__mobile-header button {
+  background: white;
+  border: 4px solid black;
+  width: 44px;
+  height: 44px;
+
+  font-size: 20px;
+  font-weight: 900;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.navbar__mobile-header button:hover {
+  background: black;
+  color: white;
+  transform: rotate(90deg);
+}
+
+.navbar__mobile-links {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 28px;
+}
+
+.navbar__mobile-links a {
+  font-size: 34px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+
+  position: relative;
+  padding-left: 20px;
+
+  transition: 0.25s ease;
+}
+
+.navbar__mobile-links a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 8px;
+  height: 0;
+  background: #dc2626;
+
+  transition: 0.25s ease;
+}
+
+.navbar__mobile-links a:hover {
+  color: #dc2626;
+  transform: translateX(8px);
+}
+
+.navbar__mobile-links a:hover::before {
+  height: 60%;
+}
+
+.navbar__mobile-footer {
+  margin-top: auto;
+  padding: 32px;
+  border-top: 8px solid black;
+  background: #f5f5f5;
+}
+
+.navbar__cta--big {
+  width: 100%;
+  font-size: 22px;
+  font-weight: 900;
+
+  padding: 18px;
+  background: #dc2626;
+  color: white;
+
+  border: 4px solid black;
+  box-shadow: 10px 10px 0 black;
+
+  text-transform: uppercase;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.navbar__cta--big:hover {
+  background: black;
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+@media (max-width: 1024px) {
+  .navbar__menu {
+    display: none;
+  }
+
+  .navbar__burger {
+    display: block;
+  }
+}
